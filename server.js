@@ -1,5 +1,5 @@
 const express = require("express");
-
+const logger = require("morgan");
 const mongoose = require("mongoose");
 const compression = require("compression");
 
@@ -18,7 +18,7 @@ app.use(express.static("public"));
 
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
-  useFindAndModify: false
+
 });
 
 // routes
